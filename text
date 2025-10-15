@@ -1,0 +1,19 @@
+notas: 
+
+Windows: 
+
+cd xampp
+cd mysql
+cd bin
+mysql -u root -p
+
+mysql -u root -p bdcrud_a < C:\xampp\htdocs\aulacrud_a\copiabanco\bdcrud_a.sql
+
+mysqldump -u root -p bdcrud_a > C:\xampp\htdocs\aulacrud_a\copiabanco\bdcrud_a.sql
+
+Linux:
+
+
+
+mysql -u root -p bdcrud_a < /var/www/html/aulacrud_a/copiabanco/bdcrud_a.sql
+
