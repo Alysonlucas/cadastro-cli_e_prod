@@ -1,0 +1,268 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #1e2a32;
+    color: #ecf0f1;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: #1e2a32;
+    border-bottom: 2px solid #1abc9c;
+}
+
+.cabecalho h1 {
+    font-size: 26px;
+    color: #ecf0f1;
+    letter-spacing: 1px;
+}
+
+.cabecalho span {
+    color: #1abc9c;
+}
+
+.cabecalho nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin-left: 25px;
+    transition: 0.3s;
+}
+
+.cabecalho nav a:hover {
+    color: #1abc9c;
+}
+
+/* Apresentação */
+.apresentacao {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    background-color: #26343e;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.apresentacao .texto {
+    flex: 1;
+    padding: 20px;
+}
+
+.apresentacao .texto h2 {
+    font-size: 32px;
+    color: #1abc9c;
+    margin-bottom: 15px;
+}
+
+.apresentacao .texto p {
+    color: #ecf0f1;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.apresentacao .imagem {
+    flex: 1;
+    text-align: center;
+}
+
+.apresentacao img {
+    width: 90%;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+/* Serviços */
+.servicos {
+    padding: 60px;
+    text-align: center;
+    background: #1e2a32;
+}
+
+.servicos h2 {
+    color: #1abc9c;
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.card {
+    background: #26343e;
+    border-radius: 15px;
+    width: 300px;
+    padding-bottom: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.card h3 {
+    color: #1abc9c;
+    margin-top: 10px;
+}
+
+.card p {
+    padding: 10px 15px;
+    color: #bdc3c7;
+    font-size: 15px;
+}
+
+.card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+
+/* Cadastros */
+.cadastros {
+    padding: 60px;
+    background: #26343e;
+    text-align: center;
+}
+
+.cadastros h2 {
+    color: #1abc9c;
+}
+
+.blocos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.bloco {
+    background: #1e2a32;
+    color: #ecf0f1;
+    border-radius: 20px;
+    width: 300px;
+    padding: 25px;
+    text-decoration: none;
+    border: 1px solid #1abc9c;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: 0.4s;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.bloco h3 {
+    color: #1abc9c;
+    margin-bottom: 10px;
+}
+
+.bloco:hover {
+    transform: scale(1.05);
+    background: #1abc9c;
+    color: #1e2a32;
+}
+
+.bloco:hover h3 {
+    color: #1e2a32;
+}
+
+.bloco.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Contato */
+.contato {
+    padding: 60px;
+    text-align: center;
+    background: #1e2a32;
+}
+
+.contato button {
+    background: #1abc9c;
+    color: #1e2a32;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contato button:hover {
+    background: #16a085;
+}
+
+/* Rodapé */
+footer {
+    background: #1e2a32;
+    color: #95a5a6;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .apresentacao {
+        flex-direction: column;
+    }
+    .cards, .blocos {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Animações */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplicando animações */
+.apresentacao, .servicos, .cadastros, .contato {
+    animation: fadeInUp 1s ease forwards;
+}
+
+/* Ao rolar a página */
+.card, .bloco {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.5s ease;
+}
+
+.card:hover, .bloco:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+.card.visible, .bloco.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Script sugerido para ativar ao rolar (adicione no final do index.php antes do </body>) */

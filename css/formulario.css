@@ -1,0 +1,114 @@
+/* Layout base */
+body {
+    background: #1e2a32;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #ecf0f1;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Container */
+.container {
+    background: #26343e;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Título */
+.container h1 {
+    text-align: center;
+    color: #1abc9c;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    font-weight: 500;
+    color: #bdc3c7;
+}
+
+input, select, textarea {
+    background: #1e2a32;
+    border: 2px solid #34495e;
+    color: #ecf0f1;
+    padding: 12px 14px;
+    border-radius: 10px;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #1abc9c;
+    box-shadow: 0 0 10px rgba(26,188,156,0.3);
+}
+
+/* Botão */
+button {
+    background: #1abc9c;
+    color: #1e2a32;
+    border: none;
+    border-radius: 25px;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+button:hover {
+    background: #16a085;
+    transform: scale(1.03);
+}
+
+/* Link de voltar */
+.voltar {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.voltar a {
+    text-decoration: none;
+    color: #1abc9c;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.voltar a:hover {
+    color: #16a085;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .container {
+        padding: 25px;
+    }
+    h1 {
+        font-size: 22px;
+    }
+}
+
+/* Animação */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
